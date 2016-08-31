@@ -55,10 +55,24 @@ You can also download their app for mobile.
  
 ### Heroku
 
+Heroku is our cloud Platform-as-a-Service (Paas) of choice.  It will allow the team to build, deliver, monitor and scale our personnel tracker during development.  Learn more about Heroku at <https://devcenter.heroku.com>  
+
+So here's the deal, Heroku will be connected to our source code hosted at <https://github.com/foodstamp/personneltracker>, and as the master branch accepts pull requests the main prototype will be updated with the new code.  
+
+Contributors will still be responsible for setting up their local environment however, as we will create different branches during different phases of development.  Outlined below are the different technologies, settings, and configurations necessary in order to get your local environment up and running. 
 
 #### Virtualenv
 
+```
+apt-get update 
+```
+```
+apt-get -y install python-pip
+```
+
 #### Django
+
+Documentation:  <https://docs.djangoproject.com/en/1.10/>
 
 #### Nginx
 
@@ -68,9 +82,9 @@ You can also download their app for mobile.
 
 #### MongoDB
 
+Documentation:  <https://docs.mongodb.com>
 
 ## Mockups
-
 
 Visual representation of requirements
 
