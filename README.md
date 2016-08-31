@@ -63,12 +63,9 @@ Contributors will still be responsible for setting up their local environment ho
 
 #### Virtualenv
 
-```
-apt-get update 
-```
-```
-apt-get -y install python-pip
-```
+Refer to this link for setting up your Python virtual environment:
+
+<https://docs.python-guide.org/en/latest/dev/virtualenvs/>
 
 #### Django
 
