@@ -25,5 +25,7 @@ git checkout <branch>
 ```
 
 ## Cache username/password authentication for 1 hour
+```sh
 git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=3600'
+```
