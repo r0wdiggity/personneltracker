@@ -47,8 +47,10 @@ A Django web app with MongoDB database that allows administrative staff to:
 
 ### Slack
 
-The main communication system for team members.
-Link to web app:  ![Slack](https://personneltracker.slack.com/messages)
+The main communication system for team members.  Link to web app:
+
+<https://personneltracker.slack.com/messages>
+
 You can also download their app for mobile.
  
 ### Heroku
