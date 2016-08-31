@@ -61,6 +61,14 @@ So here's the deal, Heroku will be connected to our source code hosted at <https
 
 Contributors will still be responsible for setting up their local environment however, as we will create different branches during different phases of development.  Outlined below are the different technologies, settings, and configurations necessary in order to get your local environment up and running. 
 
+* Before starting, the following need to be installed locally
+  - Python 2.7
+  - Pip
+  - Virtualenv
+     + ``` pip install virtualenv  ```
+  - Postgres 
+     + [Postgres](https://devcenter.heroku.com/articles/heroku-postgresql#local-setup)
+
 #### Virtualenv
 
 Refer to this link for setting up your Python virtual environment:
