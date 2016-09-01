@@ -148,75 +148,52 @@ Documentation:  <https://docs.mongodb.com>
 
 #### Authentication portal
 
-* Picture:  Unit logo
-* Text field:  Username
-* Text field:  Password 
-* Button:  Sign in
-* Link:  Forgot Password?
-* Button:  Register
+This is the landing page for the application.  From this page you can authenticate, initiate forgot password service,
+and initiate register service.
+
+Admin personnel will receive notification of a new user registration, and then approve the new user.
+
+Upon successful login, the user now has different levels of access/ability based on role assignment.
+
+Sensitive information will be stored on a remote server.
+  
+Eventually we want to enable smart-card access.
 
 #### Registration page
 
-* Text field:  First name
-* Text field:  Last name
-* Text field:  DOD number
-* Text field:  Phone number
-* Text field:  Home address
-* Text field:  Organization
-* Text field:  Rank
+Capture personnel information such as ID number, address, name, etc.
 
-#### Notifications
-
-* Left side pane
-    - Button:  Add personnel request
-    - Button:  Delete personnel request
-    - Button:  Modify data request
-    - Button:  Grant permissions request
-    - Link:  Show archived
-* Main view
-    - Admin data
-    - Etc
+Once approved, on the back end this information feeds into our many summary statistics services. 
 
 #### Dashboard
 
-* Left side pane
-    - Search field
-    - Area to return list of names
-* Center view
+Provides a complete picture of an individual's information such as PID, organizational training, day-to-day
+statistics, etc.
 
-* Right pane
-    - Button:  Edit data
-    - Button:  Print report
-    - Button:  Search
-    - Button:  Statistics
-    - Button:  Notifications
-    - Button:  Settings
-    - Button:  Logout
+A toolbar of options will be available to take action on this data (print, edit, gather stats, etc.)
+
+#### Notifications
+
+As updates are made on a personnel's data, admins receive notification describing what has been changed and 
+they have the option to accept or reject the change
 
 #### Roles and permissions
 
-* Roles
-    - S1
-    - User
-    - Admin
-    - Leadership
-* Permissions
-    - Read
-    - Write
-    - Execute
+Roles (groups) will be created that house employees of particular departments.  These roles will have permissions
+that allow users within the role to execute certain actions throughout the application.
 
 #### Summary statistics
 
-* MOS time in service
-* Etc
+This is one of the main features of the application.  The goal is to gather data and metadata of personnel, 
+and generate trends and real-time analytics to support decision making throughout the organization.
 
 ## Use cases
 
-#### Export/import CSV file format
-#### Help/FAQ section
-#### Users can update their data, but changes require approval from S1 before writing to storage (notifications)
-#### Users can upload certificates to their profile
-#### Individual-stat tracking (for appointments, sick, leave) 
+* Export/import CSV file format
+* Help/FAQ section
+* Users can update their data, but changes require approval from S1 before writing to storage (notifications)
+* Users can upload certificates to their profile
+* Individual-stat tracking (for appointments, sick, leave) 
 
 ## Mockups
 
