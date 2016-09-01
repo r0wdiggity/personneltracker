@@ -21,6 +21,7 @@
 Admin staff and HR sections upper, mid, and lower levels manage personnel data using numerous Excel spreadsheets and paper documents. This creates several challenges:
 
   * Unncessary duplication of personnel data
+  * One person editing a spreadsheet locks it for others
   * Inefficient information management flows
   * Leaders cannot quickly obtain reports and mine statistics
 
@@ -128,27 +129,75 @@ Visit: <https://personneltracker.slack.com>
 
 You can also download their app for mobile.
  
-### ~~Heroku~~ Cloud Environment
+### Testing
 
-~~Heroku is our cloud Platform-as-a-Service (Paas). If Github hosts the master source code, Heroku hosts the master product (personnel tracker web app). Learn more at <https://devcenter.heroku.com>~~~
+Test-driven development focuses on very short software development cycles, continually tested against specific requirements and test cases. Software is only added if it can pass all the tests.This reduces the amount of time in unnecessary debugging and bug-hunting. The cycle goes:
 
+1. Add a test to define a function or improvement
+2. Run all the tests and see if this new one fails
+3. Write the code to make the test pass
+4. Run all the tests again
+5. Refactor and clean code, removing duplication
+6. Repeat
 
-Contributors will still be responsible for setting up their local environment however, as we will create different branches during different phases of development.  Outlined below are the different technologies, settings, and configurations necessary in order to get your local environment up and running. 
+![TDD](https://upload.wikimedia.org/wikipedia/commons/0/0b/TDD_Global_Lifecycle.png)
 
+Testing the entire web app will be a different, albeit similar process. [Please read the Meteor testing guide](https://guide.meteor.com/testing.html)
 
-Documentation:  <https://docs.djangoproject.com/en/1.10/>
+### Cloud Engine
 
-#### AngularJS
+Just as Github hosts the master source code, we need an engine to host the master product (personnel tracker web app) that allows collaborators to access and test. Heroku, Google Compute, Amazon EC2 are all prospective options.
 
-#### Node.js
+Contributors will still be responsible for setting up their local environment, however, as we will be working on different branches. Below are the different technologies we will use in our development stack.
+
+#### Meteor
+
+[Meteor](https://www.meteor.com/) is a web framework written in [Node.js](https://nodejs.org/en/) (server-side javascript runtime environment). Using Meteor lets us quickly build a web app using a single programming language and integrates well with MongoDB. No need to glue different frameworks together. Download the installer and do the tutorial.
 
 #### MongoDB
 
-Documentation:  <https://docs.mongodb.com>
+MongoDB is a NoSQL (non-relational) database, scaling well with large datasets (supports paralellism). It stores data in JSON, which is human-readable:
 
-## Components
+```json
+{
+    '_id' : 1,
+    'name' : { 'first' : 'John', 'last' : 'Backus' },
+    'contribs' : [ 'Fortran', 'ALGOL', 'Backus-Naur Form', 'FP' ],
+    'awards' : [
+        {
+            'award' : 'W.W. McDowell Award',
+            'year' : 1967,
+            'by' : 'IEEE Computer Society'
+        }, {
+            'award' : 'Draper Prize',
+            'year' : 1993,
+            'by' : 'National Academy of Engineering'
+        }
+    ]
+}
+```
 
-#### Authentication portal
+The key-value design lets us throw different data fields or even large objects like PDFs at the database. Opt-ing out of SQL will provides flexibility for the personnel tracker.
+
+Documentation:  <https://docs.mongodb.com> 
+
+#### AngularJS
+
+AngularJS is for client-side web page interaction. Depending on how mature the Meteor front-end engine is, we may or may not use this.
+
+More information: <https://angularjs.org/>
+
+#### Bootstrap
+
+Bootstrap makes the front-end webpage HTML/CSS nice. Templates, themes, glamor.
+
+<https://getbootstrap.com/getting-started/#examples>
+
+# Components
+
+Refer to the [Mockups](#mockups) for a visual understanding of the project.
+
+## Authentication portal
 
 This is the landing page for the application.  From this page you can authenticate, initiate forgot password service,
 and initiate register service.
