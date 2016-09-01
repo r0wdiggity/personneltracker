@@ -13,7 +13,10 @@
   * [AngularJS](#angularjs)
   * [Node.js](#node.js)
   * [MongoDB](#mongodb)
-* [Mockups](#mockups)
+* [Components](#components)
+  * [Authentication Portal](#authentication-portal)
+  * []()
+  * [Mockups](#mockups)
 
 ## Problem
 
@@ -29,12 +32,13 @@ Admin staff and HR sections upper, mid, and lower levels manage personnel data u
 
 ## Solution
 
-
 A Django web app with MongoDB database that allows administrative staff to:
 * Register incoming personnel
 * Search for individuals by name
 * Add/modify/remove data as necessary for individuals
 * Aggregate PDF certificates and documents
+
+> [See a mockup examples](#mockups)
 
 ## Workflow
 
@@ -193,56 +197,113 @@ Bootstrap makes the front-end webpage HTML/CSS nice. Templates, themes, glamor.
 
 <https://getbootstrap.com/getting-started/#examples>
 
-# Components
+## Components
 
-Refer to the [Mockups](#mockups) for a visual understanding of the project.
+Refer to the [Mockups](#mockups) for a visual understanding of the project. 
 
-## Authentication portal
+> This section needs expansion. Feel free to contribute components and ideas.
 
-This is the landing page for the application.  From this page you can authenticate, initiate forgot password service,
-and initiate register service.
+### Authentication Portal
 
-Admin personnel will receive notification of a new user registration, and then approve the new user.
+This is the landing page for the personnel tracker.
+* Prettified page with organization logo
+* Users can login with email/password (creds somewhere securely)
+* Users can recover forgotton password via email
+* New users can navigate to registration page
+* Smartcard authentication in the future
 
-Upon successful login, the user now has different levels of access/ability based on role assignment.
+### Registration page
 
-Sensitive information will be stored on a remote server.
-  
-Eventually we want to enable smart-card access.
+Person in-processing the organization creates their account for the first time.
+* Administrative data
+* Login credentials
 
-#### Registration page
+### Dashboard
 
-Capture personnel information such as ID number, address, name, etc.
+Primary view allows users to access database. 
 
-Once approved, on the back end this information feeds into our many summary statistics services. 
+* [Search functionality](#search-bar)
+* [Personnel Profiles](#personnel-profiles)
+* [Editing Data](#editing-data)
+* [Navigation toolbar](#navigation)
+* [Roles and Permissions](#roles-and-permissions)
+* [Notifications](#notifications)
+* [Status Reports](#status-reports)
+* [Uploading Documents](#uploading-documents)
+* [Export/Import CSV](#export/import-csv)
+* [Help/FAQ](#help/faq)
 
-#### Dashboard
 
-Provides a complete picture of an individual's information such as PID, organizational training, day-to-day
-statistics, etc.
+#### Search Bar
 
-A toolbar of options will be available to take action on this data (print, edit, gather stats, etc.)
+Authorized users can search for individuals' names. Can also search by other fields (organization, status, etc).
+
+#### Personnel Profiles
+
+Displays an individual's information for the user based on the user's read/view permissions. User can download documents associated with personnel data.
+
+#### Editing Data
+
+Users can edit their data
+
+#### Navigation
+
+A sidebar that allows users to access different web app functions (print, edit, gather stats, settings, logout).
+
+#### Roles and Permissions
+
+Heart and soul of the personnel tracker.
+
+Group:
+* Unit - smallest organizational entity. 
+* Section - consists of multiple units
+* Division - consists of multiple sections
+
+Roles:
+* Users - can view their own own profiles can edit personal data to be submitted for approval.
+* Leaders - can view the profiles of the organizational group they belong to.
+* Staff
+  * View/modify the profiles of the group they belong to
+  * Approve user requests for editing profile data.
+  * Assign/revoke roles to users of a lesser or equal group
+  * Cannot assign groups
+* Admin - ultimate arbiter of roles and permissions. Cannot view/modify data. Can make other admins.
+
+Examples:
+* A section leader can view the profiles of the entire section (including units)
+* A section staff can make a unit-level user a leader. Cannot make a section or division level user a leader.
+* A division staff can make a section-level user a section staff.
+* An admin can make a unit-level user a division-staff, vice versa.
+* An admin can elevate a unit staff to section staff (change groups).
+
+Upon termination/outprocessing, a user automatically loses all roles and permissions.
 
 #### Notifications
 
-As updates are made on a personnel's data, admins receive notification describing what has been changed and 
-they have the option to accept or reject the change
+Think of it like an email inbox, with less functionality.
 
-#### Roles and permissions
+* Staff and leaders receive a notifification message when a user data-edit request. 
+* Staff have the option to approve or reject the changes. Staff must provide an explanation for rejection.
+* Users receive a notification when their request gets approved/rejected.
+* All users receives a notification when their role or groups change. 
+* Once notifications are read, they get archived after 10 days and deleted after 30 days.
+* Users can view archived notifications.
 
-Roles (groups) will be created that house employees of particular departments.  These roles will have permissions
-that allow users within the role to execute certain actions throughout the application.
+#### Status Reports
 
-#### Summary statistics
+A cornerstone feature of the application.
 
-This is one of the main features of the application.  The goal is to gather data and metadata of personnel, 
-and generate trends and real-time analytics to support decision making throughout the organization.
+#### Uploading Documents
 
-## Use cases
+#### Export/Import CSV
 
-* Export/import CSV file format
-* Help/FAQ section
-* Users can update their data, but changes require approval from S1 before writing to storage (notifications)
+For excel spreadsheets.
+
+#### Help/FAQ
+
+For users who really can't figure out how to use the web app.
+
+
 * Users can upload certificates to their profile
 * Individual-stat tracking (for appointments, sick, leave) 
 
