@@ -144,6 +144,80 @@ Documentation:  <https://docs.djangoproject.com/en/1.10/>
 
 Documentation:  <https://docs.mongodb.com>
 
+## Components
+
+#### Authentication portal
+
+* Picture:  Unit logo
+* Text field:  Username
+* Text field:  Password 
+* Button:  Sign in
+* Link:  Forgot Password?
+* Button:  Register
+
+#### Registration page
+
+* Text field:  First name
+* Text field:  Last name
+* Text field:  DOD number
+* Text field:  Phone number
+* Text field:  Home address
+* Text field:  Organization
+* Text field:  Rank
+
+#### Notifications
+
+* Left side pane
+    - Button:  Add personnel request
+    - Button:  Delete personnel request
+    - Button:  Modify data request
+    - Button:  Grant permissions request
+    - Link:  Show archived
+* Main view
+    - Admin data
+    - Etc
+
+#### Dashboard
+
+* Left side pane
+    - Search field
+    - Area to return list of names
+* Center view
+
+* Right pane
+    - Button:  Edit data
+    - Button:  Print report
+    - Button:  Search
+    - Button:  Statistics
+    - Button:  Notifications
+    - Button:  Settings
+    - Button:  Logout
+
+#### Roles and permissions
+
+* Roles
+    - S1
+    - User
+    - Admin
+    - Leadership
+* Permissions
+    - Read
+    - Write
+    - Execute
+
+#### Summary statistics
+
+* MOS time in service
+* Etc
+
+## Use cases
+
+#### Export/import CSV file format
+#### Help/FAQ section
+#### Users can update their data, but changes require approval from S1 before writing to storage (notifications)
+#### Users can upload certificates to their profile
+#### Individual-stat tracking (for appointments, sick, leave) 
+
 ## Mockups
 
 Visual representation of requirements
