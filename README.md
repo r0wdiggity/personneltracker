@@ -3,14 +3,13 @@
 * [Problem](#problem)
 * [Solution](#solution)
 * [Workflow](#workflow)
-* [Github](#github)
-* [Scrum and Agile Development](#scrum-and-agile-development)
-* [Taiga.io](#taiga)
-* [Slack](#slack)
-* [Heroku](#heroku)
-  * [Virtualenv](#virtualenv)
-  * [Django](#django)
-  * [Nginx](#nginx)
+  * [Github](#github)
+  * [Scrum and Agile Development](#scrum-and-agile-development)
+  * [Taiga.io](#taiga)
+  * [Slack](#slack)
+  * [Testing](#testing)
+* [Cloud Engine](#cloud-engine)
+  * [Meteor](#meteor)
   * [AngularJS](#angularjs)
   * [Node.js](#node.js)
   * [MongoDB](#mongodb)
@@ -94,47 +93,50 @@ git status
 
 #### Branches
 
-The ``` master ``` branch should always be production-ready and error-free for new contributors to clone. Development of new code will happen on the ``` dev ``` branch. Trusted collaborators invited to the repository have full commit/push permissions. Others should fork the branch onto their local machines, do work, then submit a pull request. We will add new branches to the Github repository as neccessary.
+- ```master``` - should always be production-ready and error-free for new contributors to clone.
+- ```testing``` - unit testing happens here.
+- ```dev``` - completed features merged here
+  + ```component_one``` - example: search bar
+  + ```component_two```
+  + ```etc```
 
+To build a car, we need to identify the components that go into a car. Likewise, a personnel tracker has various [Components](#components). Contributors can clone the repo, ```git checkout``` a component branch, and start committing code. Trusted collaborators invited to the repo have full commit/push permissions. Others should submit a pull request.
+
+Once a component is completed, we will merge it to ```dev``` and ensure that nothing breaks. After fixing the issues, we will merge the dev branch into ```testing``` branch. See the [Testing](#testing) section for more information. Finally, we merge into ```master```.
 
 ### Scrum and Agile Development
 
+Modern software development is a relatively low-risk, low cost-of-failure process. We can build, break, and implement very quickly. Contrast this to engineering projects, where meticulous planning coordination is indispensable. Constructing a bridge through trial-and-error is too expensive. 
+
+The Scrum methodology is an agile development framework that seeks to minimize friction between product owners and developers. Projects break down into "sprints", work sessions that last for a few weeks. The end of each sprint should result in a potentially shippable product or feature (ex: registration form). Each sprint contains a set of **user stories**, TODO list items of *what* we need to do. Each user story has a set of **tasks** that describe _how_ to do it. 
+
+At the end of each sprint developers meet with the product owner(s) to present what has been accomplished, challenges encountered, and the goal for next sprint. The product owner provides project direction and additional guidance on the product. The goal is to **_maximize feedback loops_** to keep the product owners and developers in sync. 
+
+[Rugby Scrum](https://www.youtube.com/watch?v=jUz1ytcnn3c)
+
 ### Taiga
+
+Taiga is a Scrum management framework that allows us to create sprints and user stories. We can open/close tasks, assign them to members, document the amount of effort taken in points (since humans aren't good at estimating time). The Taiga backlog and sprint taskboards will be the primary way for members to see what needs to get done.
+
+Visit: <https://tree.taiga.io/project/foodstamp-personneltracker/backlog>
 
 ### Slack
 
-The main communication system for team members. Visit: <https://personneltracker.slack.com>
+Slack allows us to communicate in a IRC/email fashion among members. You can share images, code snippets, emojis, and memes. Our Slack is webhooked to ```#taiga```, receiving user story or task updates pushed by Taiga.
+
+Visit: <https://personneltracker.slack.com>
 
 You can also download their app for mobile.
  
-### Heroku
+### ~~Heroku~~ Cloud Environment
 
-Heroku is our cloud Platform-as-a-Service (Paas). If Github hosts the master source code, Heroku hosts the master product (personnel tracker web app). Learn more at <https://devcenter.heroku.com>  
+~~Heroku is our cloud Platform-as-a-Service (Paas). If Github hosts the master source code, Heroku hosts the master product (personnel tracker web app). Learn more at <https://devcenter.heroku.com>~~~
 
-Heroku will be connected to our source code hosted at <https://github.com/foodstamp/personneltracker>, and as the master branch accepts pull requests the main prototype will be updated with the new code.  
 
 Contributors will still be responsible for setting up their local environment however, as we will create different branches during different phases of development.  Outlined below are the different technologies, settings, and configurations necessary in order to get your local environment up and running. 
 
-* Before starting, the following need to be installed locally
-  - Python 2.7
-  - Pip
-  - Virtualenv
-    + ``` pip install virtualenv  ```
-  - MongoDB
-     + [Django MongoDB Engine](https://django-mongodb-engine.readthedocs.io/en/latest/)
-  - Django
-
-#### Virtualenv
-
-Refer to this link for setting up your Python virtual environment:
-
-<https://docs.python-guide.org/en/latest/dev/virtualenvs/>
-
-#### Django
 
 Documentation:  <https://docs.djangoproject.com/en/1.10/>
-
-#### Nginx
 
 #### AngularJS
 
