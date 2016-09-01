@@ -158,7 +158,7 @@ Contributors will still be responsible for setting up their local environment, h
 
 MongoDB is a NoSQL (non-relational) database, scaling well with large datasets (supports paralellism). It stores data in JSON, which is human-readable:
 
-```json
+```javascript
 {
     '_id' : 1,
     'name' : { 'first' : 'John', 'last' : 'Backus' },
