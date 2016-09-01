@@ -15,7 +15,8 @@
   * [MongoDB](#mongodb)
 * [Components](#components)
   * [Authentication Portal](#authentication-portal)
-  * []()
+  * [Registration Page](#registration-page)
+  * [Dashboard](#dashboard)
   * [Mockups](#mockups)
 
 ## Problem
@@ -212,11 +213,12 @@ This is the landing page for the personnel tracker.
 * New users can navigate to registration page
 * Smartcard authentication in the future
 
-### Registration page
+### Registration Page
 
 Person in-processing the organization creates their account for the first time.
 * Administrative data
 * Login credentials
+* NEED MOAR ITEMS
 
 ### Dashboard
 
@@ -244,11 +246,11 @@ Displays an individual's information for the user based on the user's read/view 
 
 #### Editing Data
 
-Users can edit their data
+Users can edit their data and upload substantiating documents. For example, changing one's last name would require a marriage certificate justifying the change. Changes submitted to staff for approval.
 
 #### Navigation
 
-A sidebar that allows users to access different web app functions (print, edit, gather stats, settings, logout).
+A sidebar that allows users to access different web app functions (PDF print, edit, gather stats, settings, logout).
 
 #### Roles and Permissions
 
@@ -265,6 +267,7 @@ Roles:
 * Staff
   * View/modify the profiles of the group they belong to
   * Approve user requests for editing profile data.
+  * Cannot edit or approvte their own requests, must receive approval from a greater entity.
   * Assign/revoke roles to users of a lesser or equal group
   * Cannot assign groups
 * Admin - ultimate arbiter of roles and permissions. Cannot view/modify data. Can make other admins.
@@ -283,6 +286,7 @@ Upon termination/outprocessing, a user automatically loses all roles and permiss
 Think of it like an email inbox, with less functionality.
 
 * Staff and leaders receive a notifification message when a user data-edit request. 
+* Approvals happen at the lowest possible level. A unit-level user request would be sent to a section staff.
 * Staff have the option to approve or reject the changes. Staff must provide an explanation for rejection.
 * Users receive a notification when their request gets approved/rejected.
 * All users receives a notification when their role or groups change. 
@@ -291,9 +295,16 @@ Think of it like an email inbox, with less functionality.
 
 #### Status Reports
 
-A cornerstone feature of the application.
+A cornerstone feature of the application. Can export an individual profile as a PDF for printing. Individual profiles should have the option to mass download all associated documents as a zip file. 
+
+Organizational reports can contain statistics:
+
+* Number of people on vacation/sick/availability
+* NEED MOAR EXAMPLES
 
 #### Uploading Documents
+
+When editing a profile, an upload button next to each data field allows users to provide substantiating documents. New documents uploaded will replace old ones.
 
 #### Export/Import CSV
 
@@ -302,10 +313,6 @@ For excel spreadsheets.
 #### Help/FAQ
 
 For users who really can't figure out how to use the web app.
-
-
-* Users can upload certificates to their profile
-* Individual-stat tracking (for appointments, sick, leave) 
 
 ## Mockups
 
