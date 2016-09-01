@@ -33,7 +33,7 @@ Admin staff and HR sections upper, mid, and lower levels manage personnel data u
 
 ## Solution
 
-A Django web app with MongoDB database that allows administrative staff to:
+A web app with MongoDB database that allows administrative staff to:
 * Register incoming personnel
 * Search for individuals by name
 * Add/modify/remove data as necessary for individuals
@@ -56,7 +56,7 @@ Set up the username/email paramaters for git config:
 git config --global user.name "<username>"
 git config --global user.email "<email address>"
 ```
-If you are using HTTPS instaed of SSH, you will have to authenticate with username and password every push. Caching your credentials for one hour will make life easier:
+If you are using HTTPS instead of SSH, you will have to authenticate with username and password every push. Caching your credentials for one hour will make life easier:
 ```sh
 git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=3600'
@@ -73,7 +73,7 @@ git commit -m "<message>"
 git push -u origin master
 ```
 
-Add will queue up the files you've added. Commit records a message for what you've done and preps the files to go upstream. Push syncs your local copy of the branch to the master copy on the repo.
+Add will queue up the files you've added and/or edited. Commit records a message for what you've done and preps the files to go upstream. Push syncs your local copy of the branch to the master copy on the repo.
 
 Sometimes as you are working, someone else will have already pushed to the master. When you do a ``` git fetch ``` and ``` git merge ``` to sync with the master, this will wipe out your progress. Save your work using:
 
@@ -128,7 +128,7 @@ Visit: <https://tree.taiga.io/project/foodstamp-personneltracker/backlog>
 
 ### Slack
 
-Slack allows us to communicate in a IRC/email fashion among members. You can share images, code snippets, emojis, and memes. Our Slack is webhooked to ```#taiga```, receiving user story or task updates pushed by Taiga.
+Slack allows us to communicate in an IRC/email fashion among members. You can share images, code snippets, emojis, and memes. Our Slack is webhooked to ```#taiga```, receiving user story or task updates pushed by Taiga.
 
 Visit: <https://personneltracker.slack.com>
 
@@ -218,7 +218,7 @@ This is the landing page for the personnel tracker.
 Person in-processing the organization creates their account for the first time.
 * Administrative data
 * Login credentials
-* NEED MOAR ITEMS
+* NEED MORE ITEMS
 
 ### Dashboard
 
