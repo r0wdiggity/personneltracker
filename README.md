@@ -45,7 +45,7 @@ A web app with MongoDB database that allows administrative staff to:
 
 We need a suite of development tools and techniques to synchronize our development efforts. Below are the various components:
 
-### Git
+### Github
 
 Google Docs provides synchronous, real-time collaboration. Git is asynchronous, allowing people to do things offline. Github hosts our repository (master copy of the code). To download a copy from the repository:
 ```sh
@@ -319,19 +319,19 @@ For users who really can't figure out how to use the web app.
 Visual representation of requirements
 
 #### Login
-![Login](https://github.com/huckfynn/personnelTracker/blob/master/wireframes/login.png)
+![Login](https://github.com/foodstamp/personneltracker/blob/master/wireframes/login.png)
 
 #### Registration
 
-![Registration](https://github.com/huckfynn/personnelTracker/blob/master/wireframes/registration.png)
+![Registration](https://github.com/foodstamp/personneltracker/blob/master/wireframes/registration.png)
 
 #### Dashboard
 
-![Dashboard](https://github.com/huckfynn/personnelTracker/blob/master/wireframes/dashboard.png)
+![Dashboard](https://github.com/foodstamp/personneltracker/blob/master/wireframes/dashboard.png)
 
 #### Viewing Notifications
 
-![Notifications](https://github.com/huckfynn/personnelTracker/blob/master/wireframes/notifications.png)
+![Notifications](https://github.com/foodstamp/personneltracker/blob/master/wireframes/notifications.png)
 
 #### Setting Roles and Persmissions
 
