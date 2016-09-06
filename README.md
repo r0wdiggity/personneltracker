@@ -5,6 +5,7 @@
 * [Timeline](#timeline)
 * [Workflow](#workflow)
   * [Github](#github)
+    * [Branches](#branches)
   * [Scrum and Agile Development](#scrum-and-agile-development)
   * [Taiga.io](#taiga)
   * [Slack](#slack)
@@ -15,6 +16,7 @@
   * [Node.js](#node.js)
   * [MongoDB](#mongodb)
 * [Components](#components)
+  * [Security](#security)
   * [Authentication Portal](#authentication-portal)
   * [Registration Page](#registration-page)
   * [Dashboard](#dashboard)
@@ -120,7 +122,6 @@ git stash apply
 Some other git commands to use and study:
 
 ```sh
-git checkout
 git log
 git status
 ```
@@ -139,6 +140,53 @@ git status
 To build a car, we need to identify the components that go into a car. Likewise, a personnel tracker has various [Components](#components). Contributors can clone the repo, ```git checkout``` a component branch, and start committing code. Trusted collaborators invited to the repo have full commit/push permissions. Others should submit a pull request.
 
 Once a component is completed, we will merge it to ```dev``` and ensure that nothing breaks. After fixing the issues, we will merge the dev branch into ```testing``` branch. See the [Testing](#testing) section for more information. Finally, we merge into ```master```.
+
+```sh
+# List all of the branches in the local repository:
+git branch
+
+# To create a new branch and then check it out: 
+git branch <name>
+git checkout <name>
+
+# You can also just use:
+git checkout -b <name>
+
+# To delete a branch:
+git branch -d <name>
+
+# To rename the current branch to <name>:
+git branch -m <name>
+
+# To merge <branch> into the *current* branch:
+git merge <branch>
+
+# To push a local branch to remote
+git push -u origin <branch>
+
+# To delete a remote branch (dangerous!)
+git push origin --delete <remote_branch>
+```
+
+##### Example
+
+```sh
+# Start a new feature
+git checkout -b new-feature master
+
+# Edit some files
+git add <file>
+git commit -m "Start a feature"
+
+# Edit some files
+git add <file>
+git commit -m "Finish a feature"
+
+# Merge in the new-feature branch
+git checkout master
+git merge new-feature
+git branch -d new-feature
+```
 
 ### Scrum and Agile Development
 
@@ -234,6 +282,11 @@ Refer to the [Mockups](#mockups) for a visual understanding of the project.
 
 > This section needs expansion. Feel free to contribute components and ideas.
 
+### Security
+
+* AES-256 for MongoDB
+* HTTPS connection to website. [Let's Encrypt](https://letsencrypt.org/)
+
 ### Authentication Portal
 
 This is the landing page for the personnel tracker.
@@ -248,6 +301,7 @@ This is the landing page for the personnel tracker.
 Person in-processing the organization creates their account for the first time.
 * Administrative data
 * Login credentials
+* Users receive confirmation email for their account
 * NEED MORE ITEMS
 
 ### Dashboard
