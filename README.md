@@ -110,18 +110,14 @@ Add will queue up the files you've added and/or edited. Commit records a message
 Sometimes as you are working, someone else will have already pushed to the master. When you do a ``` git fetch ``` and ``` git merge ``` to sync with the master, this will wipe out your progress. Save your work using:
 
 ```sh
+# Save your work
 git stash
+
+# Complete the synchronization, then to restore your work:
+# git stash apply
 ```
-
-Complete the synchronization, then to restore your work:
-
-```sh
-git stash apply
-```
-
 Some other git commands to use and study:
-
-```sh
+  ```sh
 git log
 git status
 ```
