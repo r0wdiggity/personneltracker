@@ -2,6 +2,7 @@
 
 * [Problem](#problem)
 * [Solution](#solution)
+* [Timeline](#timeline)
 * [Workflow](#workflow)
   * [Github](#github)
   * [Scrum and Agile Development](#scrum-and-agile-development)
@@ -40,6 +41,35 @@ A web app with MongoDB database that allows administrative staff to:
 * Aggregate PDF certificates and documents
 
 > [See a mockup examples](#mockups)
+
+## Timeline
+
+This is likely to shorten or expand as we progress. Project breakdown:
+
+* ~~_Planning: (1 week)_~~
+  * ~~Identifying stakeholders, gathering requirements~~
+  * ~~Drafting wireframes, product specifications~~
+* _Environment Setup: (2 weeks)_
+  * Installing/configuring virtual machines and software platforms
+* _Phase I: (3 weeks)_
+  * Front-end website
+  * Individuals able to register and fill out forms; data stored in MongoDB
+* _Phase II: (4 weeks)_
+  * Web application
+  * Individuals can view their profiles
+  * HR can search through database
+  * Can add/remove/modify information
+* _Phase III: (2 weeks)_
+  * Roles and Authentication
+  * Grant access permissions based on roles and scope (Unit, Section, Division)
+* _Phase IV: (2 weeks)_
+  * Testing
+  * Import Excel sheets as CSV into new database
+  * Bug hunting and troubleshooting
+* _Phase V: (2 weeks)_
+  * Deployment
+  * Migrate code and server, allow internal network access
+  * Web app deployed in production 
 
 ## Workflow
 
@@ -333,6 +363,10 @@ Visual representation of requirements
 
 ![Notifications](https://github.com/foodstamp/personneltracker/blob/master/wireframes/notifications.png)
 
-#### Setting Roles and Persmissions
+#### Setting Roles and Permissions
+
+[Insert Mockup]
 
 #### Organization Summary Statistics
+
+[Insert Mockup]
